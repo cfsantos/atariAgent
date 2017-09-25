@@ -35,7 +35,7 @@ D = deque()                              # Registrador onde as acoes do jogo ser
 
 observetime = 100000                     # Numero de vezes em que executaremos acoes e observacoes
 epsilon = 0.7                            # Chances de executar um movimento aleatorio# Probability of doing a random move
-gamma = 0.9                              # Desconto nas recompensas do futuro # Discounted future reward.
+gamma = 0.9                              # Desconto nas recompensas do futuro
 mb_size = 500                            # Tamanho do minibatch
 
 
@@ -123,7 +123,7 @@ done = False
 tot_reward = 0.0
 i = 0
 while not done:
-    #inicia a renderezacao do jogo
+    #inicia a renderizacao do jogo
     env.render()                    
     Q = model.predict(state)        
     action = np.argmax(Q)         
